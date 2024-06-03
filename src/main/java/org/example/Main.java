@@ -17,16 +17,17 @@ public class Main {
             opcion_registro = sc.nextLine();
             switch (opcion_registro) {
                 case "1":
-                    gestor_eventos.login_usuario();
+                    gestor_eventos.login_usuario(); // Llamada al método para iniciar sesión
                     break;
                 case "2":
-                    gestor_eventos.registro_usuario();
+                    gestor_eventos.registro_usuario(); // Llamada al método para registrarse
                     break;
                 case "3":
-                    System.out.println("Saliendo");
+                    System.out.println("Saliendo"); // Finaliza el programa
                     break;
                 default:
                     System.out.println("❗ Introduce una opción válida❗");
+                    // Abre un enlace en el navegador en caso de opción inválida
                     if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
                         try {
                             Desktop.getDesktop().browse(new URI("https://youtu.be/6W5AMPjtcns"));
@@ -35,7 +36,6 @@ public class Main {
                         }
                     }
             }
-        } while (!opcion_registro.equals("3"));
-
+        } while (!opcion_registro.equals("3")); // El bucle se repite hasta que el usuario elija la opción "3"
     }
 }

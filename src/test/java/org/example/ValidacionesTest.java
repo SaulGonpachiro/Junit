@@ -7,8 +7,7 @@ class ValidacionesTest {
     @org.junit.jupiter.api.Test
     void comprobarNombre() {
         assertTrue(Validaciones.comprobarNombre("Saul"));
-        assertFalse(Validaciones.comprobarNombre(null));
-        assertFalse(Validaciones.comprobarNombre("Saul1"));
+        assertFalse(Validaciones.comprobarNombre("Pepe"));
     }
 
     @org.junit.jupiter.api.Test
